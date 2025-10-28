@@ -1,3 +1,4 @@
+import image from "../../assets/profile.jpg"
 export default function AboutSection() {
   return (
     <section className="min-h-screen bg-white px-8 py-20 lg:px-16">
@@ -38,7 +39,7 @@ export default function AboutSection() {
             <div className="relative w-full max-w-sm">
               <div className="aspect-[2/3] rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
                 <img
-                  src="/professional-man-with-glasses-holding-dog-portrait.jpg"
+                  src={image}
                   alt="Bruno - UI/UX Designer"
                   className="w-full h-full object-cover"
                 />
