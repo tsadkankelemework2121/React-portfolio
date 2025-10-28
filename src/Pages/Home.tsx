@@ -1,5 +1,5 @@
 import AboutMe from '../Components/Home/Aboutme';
-// import CertificationSection from '../Components/Home/Certefication';
+import CertificationSection from '../Components/Home/Certifications';
 import DesignProjects from '../Components/Home/Design';
 import Hero from '../Components/Home/Hero';
 
@@ -12,7 +12,7 @@ function Homepage() {
      
       <DesignProjects />
      
-      {/* <CertificationSection />  */}
+      <CertificationSection /> 
       {/* <CodeProjects />
       <Contact />
       <Footer /> */}
