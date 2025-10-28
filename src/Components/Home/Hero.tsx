@@ -29,7 +29,7 @@ export default function Hero() {
           Get in touch
         </a>
         <h1 className="text-6xl md:text-6xl font-medium text-gray-700 mb-4">“Bringing creativity, code, and Odoo together to build what matters.”</h1>
-        <p className="text-xl md:text-5xl text-gray-700 font-medium mb-12">UI/UX Designer and Full Stack Developer</p>
+        <p className="text-xl md:text-5xl text-gray-700 font-medium mb-12">UI/UX Designer | Full Stack Developer and Odoo Implementer</p>
 
         
       </div>
