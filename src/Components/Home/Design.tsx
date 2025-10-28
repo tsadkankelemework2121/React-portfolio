@@ -10,7 +10,7 @@ import image3 from "../../assets/profile.jpg"
 export default function InfiniteCarousel() {
   const [isPaused, setIsPaused] = useState(false)
 
-  // ✅ Add proper typing to your refs
+  
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scrollPositionRef = useRef<number>(0)
 
@@ -21,7 +21,7 @@ export default function InfiniteCarousel() {
     if (isPaused) return
 
     const interval = setInterval(() => {
-      // ✅ Safe null-check before using ref
+      
       const container = scrollContainerRef.current
       if (container) {
         scrollPositionRef.current += 2
