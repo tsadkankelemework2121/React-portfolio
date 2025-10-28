@@ -4,7 +4,7 @@ export default function AboutSection() {
     <section className="min-h-screen bg-white px-8 py-20 lg:px-16">
       <div className="mx-auto max-w-7xl">
         {/* Main grid layout */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-9 items-center">
           {/* Left Column - Biography */}
           <div className="flex flex-col justify-between h-full">
             {/* Biography Header */}
@@ -27,9 +27,9 @@ export default function AboutSection() {
             <div>
               <p className="text-xs tracking-widest text-gray-400 uppercase mb-6">Contact</p>
               <div className="space-y-3 font-serif text-base">
-                <p className="text-black">Warsaw, Poland</p>
-                <p className="text-black">hello@brunoerdison.com</p>
-                <p className="text-black">+68 3568 89 86</p>
+                <p className="text-black">Bahir Dar, Ethiopia</p>
+                <p className="text-black">tsadkankelemeworktw@gmail.com.com</p>
+                <p className="text-black">+251952615114</p>
               </div>
             </div>
           </div>
@@ -48,10 +48,10 @@ export default function AboutSection() {
           </div>
 
           <div className="flex flex-col justify-center items-end gap-6 h-full">
-            <button className="px-8 py-3 bg-black text-white font-serif text-lg rounded-lg hover:bg-gray-800 transition-colors">
+            <button className="px-12 py-3 bg-black text-white font-serif text-lg rounded-lg hover:bg-purple-600 transition-colors">
               Download Resume
             </button>
-            <button className="px-8 py-3 border-2 border-black text-black font-serif text-lg rounded-lg hover:bg-black hover:text-white transition-colors">
+            <button className="px-8 py-3 border-2 text-black font-serif text-lg rounded-lg hover:bg-purple-600 hover:text-white transition-colors">
               Contact Me
             </button>
           </div>
