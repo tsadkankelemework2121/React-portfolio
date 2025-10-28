@@ -1,4 +1,5 @@
 import AboutMe from '../Components/Home/Aboutme';
+import DesignProjects from '../Components/Home/Design';
 import Hero from '../Components/Home/Hero';
 // import LanguagesMarquee from './components/LanguagesMarquee';
 // import About from './components/About';
@@ -13,10 +14,9 @@ function Homepage() {
     <div className="min-h-screen bg-white">
       <Hero />
       <AboutMe />
-      {/* <LanguagesMarquee />
-      <About />
+     
       <DesignProjects />
-      <CodeProjects />
+      {/* <CodeProjects />
       <Certifications />
       <Contact />
       <Footer /> */}
