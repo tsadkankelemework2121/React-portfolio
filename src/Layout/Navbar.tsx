@@ -28,16 +28,16 @@ export default function Navigation() {
             Tsadkan
           </a>
           <div className="flex items-center gap-8">
-            <a href="#home" className="text-gray-900 hover:text-purple-600 transition">
+            <a href="/" className="text-gray-900 hover:text-purple-600 transition">
               Home
             </a>
-            <a href="#design" className="text-gray-900 hover:text-purple-600 transition">
+            <a href="/design" className="text-gray-900 hover:text-purple-600 transition">
               Design
             </a>
-            <a href="#projects" className="text-gray-900 hover:text-purple-600 transition">
+            <a href="/projects" className="text-gray-900 hover:text-purple-600 transition">
               Projects
             </a>
-            <a href="#certification" className="text-gray-900 hover:text-purple-600 transition">
+            <a href="/certification" className="text-gray-900 hover:text-purple-600 transition">
               Certification
             </a>
           </div>
