@@ -20,15 +20,6 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute top-8 right-8 z-20">
-        <a
-          href="#contact"
-          className="inline-block text-gray-900 font-medium text-lg border-b-2 border-purple-600 pb-2 hover:text-purple-600 transition"
-        >
-          Get in touch
-        </a>
-      </div>
-
       {/* Content Overlay */}
       <div className="relative z-10 text-center px-6">
         <h1

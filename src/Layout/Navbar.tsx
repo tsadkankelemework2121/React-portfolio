@@ -49,7 +49,16 @@ export default function Navigation() {
           <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </a>
+          <div className="absolute top-8 right-8 z-20">
+        <a
+          href="#contact"
+          className="inline-block text-gray-900 font-medium text-lg border-b-2 border-purple-600 pb-2 hover:text-purple-600 transition"
+        >
+          Get in touch
+        </a>
+      </div>
         </div>
+        
       </div>
     </nav>
   )

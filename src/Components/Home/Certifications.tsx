@@ -4,15 +4,15 @@ import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 // Import certification images from assets
-import cert1 from "../../assets/AIalison.png"
-import cert2 from "../../assets/digitalcertificate.jpg"
-import cert3 from "../../assets/freeCodeCamp-certificate.png"
-import cert4 from "../../assets/gighackathon.png"
-import cert5 from "../../assets/highschooldiploma.jpg"
-import cert6 from "../../assets/macademy.png"
-import cert7 from "../../assets/reactalison.png"
-import cert8 from "../../assets/shecodeshackathon.jpg"
-
+import cert1 from "../../assets/certifications/AIalison.png"
+import cert2 from "../../assets/certifications/digitalcertificate.jpg"
+import cert3 from "../../assets/certifications/freeCodeCamp-certificate.png"
+import cert4 from "../../assets/certifications/gighackathon.png"
+import cert5 from "../../assets/certifications/highschooldiploma.jpg"
+import cert6 from "../../assets/certifications/macademy.png"
+import cert7 from "../../assets/certifications/reactalison.png"
+import cert8 from "../../assets/certifications/shecodeshackathon.jpg"
+import cert9 from "../../assets/certifications/Cursor.png"
 const CertificationSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
