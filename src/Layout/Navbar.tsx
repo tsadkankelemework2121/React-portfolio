@@ -31,9 +31,9 @@ export default function Navigation() {
             <a href="/" className="text-gray-900 hover:text-purple-600 transition">
               Home
             </a>
-            <a href="/design" className="text-gray-900 hover:text-purple-600 transition">
+            {/* <a href="/design" className="text-gray-900 hover:text-purple-600 transition">
               Design
-            </a>
+            </a> */}
             <a href="/projects" className="text-gray-900 hover:text-purple-600 transition">
               Projects
             </a>

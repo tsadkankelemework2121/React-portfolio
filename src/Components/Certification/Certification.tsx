@@ -12,6 +12,7 @@ import highschooldiploma from "../../assets/certifications/highschooldiploma.jpg
 import macademy from "../../assets/certifications/macademy.png"
 import reactalison from "../../assets/certifications/reactalison.png"
 import shecodeshackathon from "../../assets/certifications/shecodeshackathon.jpg"
+import cert10 from "../../assets/certifications/helder.png"
 
 interface Certification {
   id: number
@@ -102,6 +103,15 @@ const Certification = () => {
         "1st 🏆 place as a team at the She Codes Hackathon.Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
       image: shecodeshackathon,
       date: "March 2025",
+    },
+    {
+      id: 10,
+      title: "Helder Technologies Paid Intern:UI//UX Designer Front End Developer",
+      from: "Helder Technologies",
+      description:
+        "Many Real World Projects.",     
+         image: cert10,
+      date: "May 2025",
     },
   ]
 

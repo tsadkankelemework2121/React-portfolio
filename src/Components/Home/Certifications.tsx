@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react"
 
 // Import certification images from assets
 import cert1 from "../../assets/certifications/AIalison.png"
@@ -13,11 +12,19 @@ import cert6 from "../../assets/certifications/macademy.png"
 import cert7 from "../../assets/certifications/reactalison.png"
 import cert8 from "../../assets/certifications/shecodeshackathon.jpg"
 import cert9 from "../../assets/certifications/Cursor.png"
+import cert10 from "../../assets/certifications/helder.png"
 const CertificationSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   // Array of certification images
-  const certifications = [cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8, cert9]
+  const certifications = [cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8, cert9 ,cert10]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === certifications.length - 1 ? 0 : prev + 1))
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [certifications.length])
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? certifications.length - 1 : prev - 1))
@@ -105,24 +112,6 @@ const CertificationSection = () => {
             )
           })}
         </div>
-      </div>
-
-      {/* Navigation Buttons */}
-      <div className="flex items-center gap-4 mb-8">
-        <button
-          onClick={handlePrev}
-          className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-purple-600 hover:text-purple-600 transition-colors"
-          aria-label="Previous certification"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          onClick={handleNext}
-          className="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center hover:bg-purple-700 transition-colors"
-          aria-label="Next certification"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
       </div>
 
       {/* See More Button */}

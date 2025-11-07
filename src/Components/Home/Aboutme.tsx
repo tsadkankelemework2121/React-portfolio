@@ -14,10 +14,9 @@ export default function AboutSection() {
               {/* Main Heading with purple accent dot */}
               <div className="mb-12">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <h1 className="text-3xl lg:text-4xl font-serif leading-tight">
-                    Work for money and design for love! <span className="text-purple-600">I'm</span> Bruno, an UI/UX
-                    Interaction Designer based in Poland.
+                  <div className="w-5 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <h1 className="text-3xl lg:text-2xl font-serif leading-tight">
+                  Hi, I'm  <span className="text-purple-600">Tsadkan Kelemework</span> Specialized in UI/UX Design and Frontend Development with aspirations in Full-Stack Engineering.Passionate about creating innovative solutions beatiful user interfaces and experiences through code.
                   </h1>
                 </div>
               </div>
@@ -40,7 +39,7 @@ export default function AboutSection() {
               <div className="aspect-[2/3] rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
                 <img
                   src={image}
-                  alt="Bruno - UI/UX Designer"
+                  alt=" UI/UX Designer"
                   className="w-full h-full object-cover"
                 />
               </div>
