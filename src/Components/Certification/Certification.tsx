@@ -64,7 +64,7 @@ const Certification = () => {
       title: "Gig Hackathon Winner:Certification Of Achievement",
       from: "Gig Hackathon",
       description:
-        "1st Place Holder as a team for Gig Hackathon 2025.Awarded for outstanding performance and innovation in the Gig Hackathon competition, showcasing problem-solving and technical skills.",
+        "1st 🏆 Place Holder as a team for Gig Hackathon 2025.Awarded for outstanding performance and innovation in the Gig Hackathon competition, showcasing problem-solving and technical skills.",
       image: gighackathon,
       date: "May 2025",
     },
@@ -87,21 +87,21 @@ const Certification = () => {
     },
     {
       id: 8,
-      title: "React Development",
-      from: "Alison",
+      title: "React JavaScript",
+      from: "Digital Partner | Hosted on Alison | CPD Certified",
       description:
-        "Advanced React.js certification covering component architecture, hooks, state management, and modern React development patterns.",
+        "I successfully completed the 'React JavaScript – Fundamentals to Coding & New Beginnings' course, published by Digital Partner and delivered via the Alison learning platform. This CPD-certified course, aligned with industry standards, covers modern JavaScript, React fundamentals, component structures, hooks (e.g., useState, useEffect), and single-page app concepts. I completed all lessons and exercises but could not afford the paid certificate. The displayed certificate is a sample, and I’ve included a screenshot of the official publisher details for verification and transparency.",
       image: reactalison,
-      date: "September 2023",
+      date: "January 2025",
     },
     {
       id: 9,
-      title: "SheCodes Hackathon",
+      title: "SheCodes Hackathon :Certification Of Achievement",
       from: "SheCodes",
       description:
-        "Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
+        "1st 🏆 place as a team at the She Codes Hackathon.Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
       image: shecodeshackathon,
-      date: "August 2023",
+      date: "March 2025",
     },
   ]
 
