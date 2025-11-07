@@ -3,9 +3,14 @@
 import { useState, useRef, useEffect } from "react"
 
 import backgroundImage from "../../assets/bakground.png"
-import image1 from "../../assets/image.png"
-import image2 from "../../assets/image1.png"
-import image3 from "../../assets/profile.jpg"
+import image1 from "../../assets/design/Choose Doctor.png"
+import image2 from "../../assets/design/Frame 1000003373.png"
+import image3 from "../../assets/design/Frame 1000003374.png"
+import image4 from "../../assets/design/Frame 1000003375.png"
+import image5 from "../../assets/design/Frame 1000003376.png"
+import image6 from "../../assets/design/Frame 1000003377.png"
+import image7 from "../../assets/design/Frame 1000003379.png"
+import image8 from "../../assets/design/refocus.png"
 
 export default function InfiniteCarousel() {
   const [isPaused, setIsPaused] = useState(false)
@@ -14,7 +19,7 @@ export default function InfiniteCarousel() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scrollPositionRef = useRef<number>(0)
 
-  const images = [image1, image2, image3]
+  const images = [image1, image2, image3, image3, image4, image5, image6, image7, image8]
   const duplicatedImages = [...images, ...images]
 
   useEffect(() => {
@@ -49,7 +54,7 @@ export default function InfiniteCarousel() {
       }}
     >
       {/* Carousel Container */}
-      <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="relative h-full  w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <div
           ref={scrollContainerRef}
           onMouseEnter={() => setIsPaused(true)}

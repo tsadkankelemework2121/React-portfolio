@@ -94,7 +94,7 @@ const CertificationSection = () => {
             return (
               <div
                 key={idx}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-out"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-20 ease-out"
                 style={{
                   transform,
                   zIndex,
@@ -115,9 +115,9 @@ const CertificationSection = () => {
       </div>
 
       {/* See More Button */}
-      <button className="px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-colors shadow-lg">
+      <a href="/certification"className="mt-8 sm:mt-12 px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300 shadow-lg text-sm sm:text-base">
         See More
-      </button>
+      </a>
     </section>
   )
 }
