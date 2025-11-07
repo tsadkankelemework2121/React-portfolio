@@ -1,5 +1,4 @@
 import image from "../../assets/profile.jpg"
-// @ts-ignore - Vite handles PDF imports with ?url suffix
 import resumePdfUrl from "../../assets/Tsadkan-Kelemework (1).pdf?url"
 
 export default function AboutSection() {
@@ -48,7 +47,12 @@ export default function AboutSection() {
           {/* Center Column - Profile Image */}
           <div className="flex justify-center lg:col-span-1">
             <div className="relative w-full max-w-sm">
-              <div className="aspect-[2/3] rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
+              <div 
+                className="rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
+                style={{
+                  aspectRatio: '2/3'
+                }}
+              >
                 <img
                   src={image}
                   alt=" UI/UX Designer"

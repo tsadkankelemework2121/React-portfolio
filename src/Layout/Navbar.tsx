@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { Linkedin, Github } from "lucide-react"
 
 export default function Navigation() {
@@ -24,22 +25,19 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto py-4 flex items-center justify-between">
         {/* Left - Purple Logo + Navigation Items */}
         <div className="flex items-center gap-20">
-          <a href="#home" className="text-2xl font-bold text-purple-600 hover:text-purple-700 transition">
+          <Link to="/" className="text-2xl font-bold text-purple-600 hover:text-purple-700 transition">
             Tsadkan
-          </a>
+          </Link>
           <div className="flex items-center gap-8">
-            <a href="/" className="text-gray-900 hover:text-purple-600 transition">
+            <Link to="/" className="text-gray-900 hover:text-purple-600 transition">
               Home
-            </a>
-            {/* <a href="/design" className="text-gray-900 hover:text-purple-600 transition">
-              Design
-            </a> */}
-            <a href="/projects" className="text-gray-900 hover:text-purple-600 transition">
+            </Link>
+            <Link to="/projects" className="text-gray-900 hover:text-purple-600 transition">
               Projects
-            </a>
-            <a href="/certification" className="text-gray-900 hover:text-purple-600 transition">
+            </Link>
+            <Link to="/certification" className="text-gray-900 hover:text-purple-600 transition">
               Certification
-            </a>
+            </Link>
           </div>
         </div>
 

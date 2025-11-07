@@ -26,10 +26,10 @@ export default function Hero() {
           className="text-6xl md:text-4xl font-medium text-gray-900 mb-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          "Bringing creativity, code, and Odoo together to build what matters."
+          "Bringing creativity and code together to build what matters."
         </h1>
         <p className="text-xl md:text-3xl text-gray-700 font-medium mb-12">
-          UI/UX Designer | Full Stack Developer and Odoo Implementer
+        UI/UX Designer & Front-End Developer | Aspiring Full-Stack Developer
         </p>
       </div>
     </section>

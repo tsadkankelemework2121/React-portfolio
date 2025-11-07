@@ -218,7 +218,12 @@ const ProjectsSection = () => {
                       muted
                       playsInline
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{
+                        background: 'linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent)'
+                      }}
+                    ></div>
                     <button
                       onClick={() => handleVideoPlay(project.id)}
                       className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
@@ -237,7 +242,12 @@ const ProjectsSection = () => {
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{
+                        background: 'linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent)'
+                      }}
+                    ></div>
                   </>
                 )}
                 

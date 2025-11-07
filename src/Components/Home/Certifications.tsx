@@ -26,14 +26,6 @@ const CertificationSection = () => {
     return () => clearInterval(interval)
   }, [certifications.length])
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? certifications.length - 1 : prev - 1))
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === certifications.length - 1 ? 0 : prev + 1))
-  }
-
   // Get 5 images to display (2 before, current, 2 after)
   const getVisibleImages = () => {
     const visible = []
@@ -115,7 +107,7 @@ const CertificationSection = () => {
       </div>
 
       {/* See More Button */}
-      <a href="/certification"className="mt-8 sm:mt-12 px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300 shadow-lg text-sm sm:text-base">
+      <a href="/certification" className="mt-8 sm:mt-12 px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300 shadow-lg text-sm sm:text-base inline-block">
         See More
       </a>
     </section>

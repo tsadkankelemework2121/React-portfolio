@@ -118,7 +118,6 @@ const Certification = () => {
     
   ]
 
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [clickedId, setClickedId] = useState<number | null>(null)
 
   return (
@@ -134,8 +133,6 @@ const Certification = () => {
               key={cert.id}
               className="relative rounded-lg shadow-lg overflow-hidden transition-all duration-300 cursor-pointer"
               onClick={() => setClickedId(cert.id)}
-              onMouseEnter={() => setHoveredId(cert.id)}
-              onMouseLeave={() => setHoveredId(null)}
             >
               <div className="relative w-full h-48 bg-gray-900 overflow-hidden">
                 <img src={cert.image || "/placeholder.svg"} alt={cert.title} className="w-full h-full object-cover" />

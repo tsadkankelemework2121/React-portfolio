@@ -77,14 +77,24 @@ export default function InfiniteCarousel() {
           </div>
         </div>
 
-        <button className="mt-8 sm:mt-12 px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300 shadow-lg text-sm sm:text-base">
+        <a href="/projects" className="mt-8 sm:mt-12 px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300 shadow-lg text-sm sm:text-base inline-block">
           View All Designs
-        </button>
+        </a>
       </div>
 
       {/* Gradient Shadows */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-20 sm:w-32 h-64 sm:h-80 bg-gradient-to-r from-black/20 to-transparent pointer-events-none rounded-lg"></div>
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-20 sm:w-32 h-64 sm:h-80 bg-gradient-to-l from-black/20 to-transparent pointer-events-none rounded-lg"></div>
+      <div 
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-20 sm:w-32 h-64 sm:h-80 pointer-events-none rounded-lg"
+        style={{
+          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent)'
+        }}
+      ></div>
+      <div 
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-20 sm:w-32 h-64 sm:h-80 pointer-events-none rounded-lg"
+        style={{
+          background: 'linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent)'
+        }}
+      ></div>
     </div>
   )
 }
