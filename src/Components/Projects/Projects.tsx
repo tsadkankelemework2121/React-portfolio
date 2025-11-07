@@ -35,114 +35,118 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "AI Agent Recruiter System",
-      description:
-        "An intelligent recruitment platform powered by AI agents that streamline candidate matching, automate screening, and enhance hiring decisions with advanced machine learning algorithms.",
-      video: aiVideo,
-      languages: ["React", "AI Agents", "NLP", "Python", "TypeScript"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/ai-recruiter",
-      category: "AI/ML",
-    },
-    {
-      id: 2,
-      title: "Finance Manager – Budget Control System",
-      description:
-        "A smart budgeting app designed to help students and individuals manage expenses, track income, and set financial goals with real-time insights and analytics.",
-      image: financeImage,
-      languages: ["React", "TypeScript", "Redux", "Firebase", "Chart.js"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/finance-manager",
-      category: "Finance",
-    },
-    {
-      id: 3,
-      title: "Next.js Portfolio Website",
-      description:
-        "A modern, responsive portfolio website built with Next.js showcasing projects, skills, and contact information with smooth animations and interactions.",
-      image: nextportImage,
-      languages: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/portfolio",
-      category: "Web Development",
-    },
-    {
-      id: 4,
-      title: "Smart Nutrition Guide",
-      description:
-        "A comprehensive web application that helps users track daily calorie intake, meals, and fitness goals with personalized recommendations and meal planning.",
-      video: nutritrackVideo,
-      languages: ["React", "Node.js", "MongoDB", "Chart.js", "API Integration"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/nutrition-guide",
-      category: "Health & Fitness",
-    },
-    {
-      id: 5,
-      title: "Healthcare Management System",
-      description:
-        "An advanced healthcare management platform for hospitals and clinics to manage patient records, appointments, and medical history with secure data handling.",
-      video: healthcareVideo,
-      languages: ["React", "Node.js", "PostgreSQL", "Express", "JWT"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/healthcare",
-      category: "Healthcare",
-    },
-    {
-      id: 6,
-      title: "Knowledge First Career Platform",
-      description:
-        "A career development platform that connects job seekers with opportunities, providing career guidance, skill assessments, and personalized learning paths.",
-      video: knowledgeFirstCareerVideo,
-      languages: ["React", "TypeScript", "Firebase", "Stripe", "AI Integration"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/knowledge-first",
-      category: "Education",
-    },
-    {
-      id: 7,
-      title: "Knowledge First Learning Platform",
-      description:
-        "An innovative e-learning platform offering interactive courses, real-time collaboration, and AI-powered personalized learning experiences for students worldwide.",
-      video: knowledgeFirstVideo,
-      languages: ["Next.js", "React", "MongoDB", "Socket.io", "AI/ML"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/knowledge-first-learning",
-      category: "Education",
-    },
-    {
-      id: 8,
       title: "Refocus Design System",
       description:
         "A comprehensive design system and UI component library built for modern web applications with accessibility, theming, and responsive design at its core.",
       video: refocusVideo,
-      languages: ["React", "TypeScript", "Storybook", "Tailwind CSS", "Design Systems"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/refocus",
-      category: "Design System",
+      languages: ["React", "TypeScript" ,"Tailwind CSS"],
+      liveDemo: "https://subscribe.refocusafrika.com/",
+      gitCode: "https://github.com/bezawit11234/StudyAboard",
+      category: "Real World Project",
     },
     {
-      id: 9,
+        id: 2,
+        title: "Knowledge First Career Platform",
+        description:
+          "A career development platform that connects job seekers with opportunities, providing career guidance, skill assessments, and personalized learning paths.",
+        video: knowledgeFirstCareerVideo,
+        languages: ["React", "TypeScript" ,"Tailwind CSS"],
+        liveDemo: "https://example.com",
+        gitCode: "https://github.com/AshenafiHelder/knowledge-first.com",
+        category: "Real World Project",
+      },
+      {
+        id: 3,
+        title: "Knowledge First Learning Platform",
+        description:
+          "An innovative e-learning platform offering interactive courses, real-time collaboration, and AI-powered personalized learning experiences for students worldwide.",
+        video: knowledgeFirstVideo,
+        languages: ["React", "TypeScript" ,"Tailwind CSS"],
+        liveDemo: "https://example.com",
+        gitCode: "https://github.com/AshenafiHelder/Knowledge-first",
+        category: "REal World Project",
+      },
+    {
+      id: 4,
+      title: "AI Agent Recruiter System",
+      description:
+        "An intelligent recruitment platform powered by AI agents that streamline candidate matching, automate screening, and enhance hiring decisions with advanced machine learning algorithms.",
+      video: aiVideo,
+      languages: ["Next.js", "AI Agents", "NLP", "Python", "TypeScript"],
+      liveDemo: "https://example.com",
+      gitCode: "https://github.com/tsadkankelemework2121/Airecruiter",
+      category: "AI/ML group project",
+    },
+    
+    {
+      id: 5,
+      title: "Smart Nutrition Guide",
+      description:
+        "A comprehensive web application that helps users track daily calorie intake, meals, and fitness goals with personalized recommendations and meal planning.",
+      video: nutritrackVideo,
+      languages: ["Next.js", "Node.js", "MongoDB", "Chart.js", "API Integration"],
+      liveDemo: "https://example.com",
+      gitCode: "https://github.com/tsadkankelemework2121/NutiTrack",
+      category: "Personal Project",
+    },
+    {
+      id: 6,
+      title: "Healthcare Management System",
+      description:
+        "An advanced healthcare management platform for hospitals and clinics to manage patient records, appointments, and medical history with secure data handling.",
+      video: healthcareVideo,
+      languages: ["Java"],
+      liveDemo: "https://example.com",
+      gitCode: "https://github.com/tsadkankelemework2121/Healthcare-Appointment-system",
+      category: "Group Project",
+    },
+   
+   
+    
+    {
+      id: 7,
       title: "ETex Business Management",
       description:
         "A complete business management solution for enterprises, featuring inventory management, sales tracking, customer relations, and comprehensive reporting tools.",
       video: etexVideo,
       languages: ["React", "Node.js", "PostgreSQL", "Express", "Odoo"],
       liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/etex",
-      category: "Business",
+      gitCode: "https://github.com/HiwotBelay/Etex-clone",
+      category: "Group test Project before we get in to real project",
     },
     {
-      id: 10,
+      id: 8,
       title: "RichFam Clone Application",
       description:
         "A feature-rich social networking application inspired by modern platforms, with real-time messaging, content sharing, and community features.",
       video: richfamclonVideo,
-      languages: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/example/richfam-clone",
-      category: "Social Media",
+      languages: ["React", "TypeScript" ,"Tailwind CSS"],
+      liveDemo: "https://holistic-richfam-clone-virid.vercel.app/",
+      gitCode: "https://github.com/tsadkankelemework2121/Holistic-richfam-clone",
+      category: "Group test Project before we get in to real project",
     },
+    {
+        id: 9,
+        title: "Finance Manager – Budget Control System",
+        description:
+          "A smart budgeting app designed to help students and individuals manage expenses, track income, and set financial goals with real-time insights and analytics.",
+        image: financeImage,
+        languages: ["React", "TypeScript", "MongoDB" ,"Node.js","Tailwind CSS"],
+        liveDemo: "https://example.com",
+        gitCode: "https://github.com/tsadkankelemework2121/Coin-Control",
+        category: "Personal Project",
+      },
+      {
+        id: 10,
+        title: "Next.js Portfolio Website",
+        description:
+          "A modern, responsive portfolio website built with Next.js showcasing projects, skills, and contact information with smooth animations and interactions.",
+        image: nextportImage,
+        languages: ["Next.js", "Tailwind CSS", "TypeScript"],
+        liveDemo: "https://tsadkan-portfolio.netlify.app/projects",
+        gitCode: "https://github.com/tsadkankelemework2121/portfolio",
+        category: "Personal Project",
+      },
   ]
 
   const handleVideoPlay = (projectId: number) => {

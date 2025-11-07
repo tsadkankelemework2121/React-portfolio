@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Twitter, Linkedin, Github } from "lucide-react"
+import { Linkedin, Github } from "lucide-react"
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -45,13 +45,13 @@ export default function Navigation() {
 
         {/* Right - Social Media Icons + Get in touch */}
         <div className="flex items-center gap-8">
-          <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="Twitter">
-            <Twitter className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="LinkedIn">
+          {/* <a href="tsadkankelemeworktw@gmail.com" className="text-gray-900 hover:text-purple-600 transition" aria-label="Twitter">
+            <Mail className="w-5 h-5" />
+          </a> */}
+          <a href="https://www.linkedin.com/in/tsadkan-kelemework-11aa30345/" className="text-gray-900 hover:text-purple-600 transition" aria-label="LinkedIn">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="GitHub">
+          <a href="https://github.com/tsadkankelemework2121" className="text-gray-900 hover:text-purple-600 transition" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </a>
           <a
