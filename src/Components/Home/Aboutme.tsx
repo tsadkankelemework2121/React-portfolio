@@ -1,5 +1,17 @@
 import image from "../../assets/profile.jpg"
+// @ts-ignore - Vite handles PDF imports with ?url suffix
+import resumePdfUrl from "../../assets/Tsadkan-Kelemework (1).pdf?url"
+
 export default function AboutSection() {
+  const handleDownloadResume = () => {
+    const link = document.createElement("a")
+    link.href = resumePdfUrl
+    link.download = "Tsadkan-Kelemework-Resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section className="min-h-screen bg-white px-8 py-20 lg:px-16">
       <div className="mx-auto max-w-7xl">
@@ -14,7 +26,7 @@ export default function AboutSection() {
               {/* Main Heading with purple accent dot */}
               <div className="mb-12">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-5 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-5 h-2 bg-purple-600 rounded-full mt-2 shrink-0"></div>
                   <h1 className="text-3xl lg:text-2xl font-serif leading-tight">
                   Hi, I'm  <span className="text-purple-600">Tsadkan Kelemework</span> Specialized in UI/UX Design and Frontend Development with aspirations in Full-Stack Engineering.Passionate about creating innovative solutions beatiful user interfaces and experiences through code.
                   </h1>
@@ -47,7 +59,10 @@ export default function AboutSection() {
           </div>
 
           <div className="flex flex-col justify-center items-end gap-6 h-full">
-            <button className="px-12 py-3 bg-black text-white font-serif text-lg rounded-lg hover:bg-purple-600 transition-colors">
+            <button 
+              onClick={handleDownloadResume}
+              className="px-12 py-3 bg-black text-white font-serif text-lg rounded-lg hover:bg-purple-600 transition-colors"
+            >
               Download Resume
             </button>
             <button className="px-8 py-3 border-2 text-black font-serif text-lg rounded-lg hover:bg-purple-600 hover:text-white transition-colors">

@@ -59,18 +59,18 @@ export default function InfiniteCarousel() {
           ref={scrollContainerRef}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="w-full max-w-2xl sm:max-w-4xl lg:max-w-6xl overflow-hidden rounded-lg shadow-2xl"
+          className="w-full max-w-4xl sm:max-w-5xl lg:max-w-7xl overflow-hidden rounded-lg shadow-2xl"
         >
-          <div className="flex gap-3 sm:gap-4">
+          <div className="flex gap-4 sm:gap-6 lg:gap-8">
             {duplicatedImages.map((image, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-48 h-40 sm:w-64 sm:h-48 lg:w-80 lg:h-64 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                className="shrink-0 w-72 h-96 sm:w-96 sm:h-[500px] lg:w-[450px] lg:h-[250px] rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 bg-white shadow-lg"
               >
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`Design ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}
