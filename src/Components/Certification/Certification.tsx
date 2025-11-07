@@ -19,6 +19,7 @@ interface Certification {
   from: string
   description: string
   image: string
+  date: string
 }
 
 const Certification = () => {
@@ -31,6 +32,7 @@ const Certification = () => {
       description:
         "Comprehensive course covering artificial intelligence fundamentals, machine learning basics, and AI applications in modern technology.",
       image: AIalison,
+      date: "March 2024",
     },
     {
       id: 2,
@@ -38,6 +40,7 @@ const Certification = () => {
       from: "Cursor",
       description: "Professional certification demonstrating proficiency in Cursor IDE and advanced coding practices.",
       image: Cursor,
+      date: "February 2024",
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ const Certification = () => {
       from: "Digital Academy",
       description: "Recognition of digital skills and competencies in modern technology and digital transformation.",
       image: digitalcertificate,
+      date: "January 2024",
     },
     {
       id: 4,
@@ -53,6 +57,7 @@ const Certification = () => {
       description:
         "Comprehensive certification covering front-end and back-end development, databases, and full-stack web development practices.",
       image: freeCodeCamp,
+      date: "December 2023",
     },
     {
       id: 5,
@@ -61,6 +66,7 @@ const Certification = () => {
       description:
         "Awarded for outstanding performance and innovation in the Gig Hackathon competition, showcasing problem-solving and technical skills.",
       image: gighackathon,
+      date: "November 2023",
     },
     {
       id: 6,
@@ -68,6 +74,7 @@ const Certification = () => {
       from: "High School",
       description: "Academic achievement certificate representing completion of high school education with excellence.",
       image: highschooldiploma,
+      date: "June 2020",
     },
     {
       id: 7,
@@ -76,6 +83,7 @@ const Certification = () => {
       description:
         "Professional certification from M Academy demonstrating expertise in specialized technical skills and knowledge.",
       image: macademy,
+      date: "October 2023",
     },
     {
       id: 8,
@@ -84,6 +92,7 @@ const Certification = () => {
       description:
         "Advanced React.js certification covering component architecture, hooks, state management, and modern React development patterns.",
       image: reactalison,
+      date: "September 2023",
     },
     {
       id: 9,
@@ -92,6 +101,7 @@ const Certification = () => {
       description:
         "Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
       image: shecodeshackathon,
+      date: "August 2023",
     },
   ]
 
@@ -109,37 +119,29 @@ const Certification = () => {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 cursor-pointer group"
-              style={{
-                transform: hoveredId === cert.id ? "scale(1.05)" : "scale(1)",
-                zIndex: hoveredId === cert.id ? 10 : 1,
-              }}
+              className="relative rounded-lg shadow-lg overflow-hidden transition-all duration-300 cursor-pointer"
+              onClick={() => setClickedId(cert.id)}
               onMouseEnter={() => setHoveredId(cert.id)}
               onMouseLeave={() => setHoveredId(null)}
-              onClick={() => setClickedId(cert.id)}
             >
-              {/* Image Container */}
-              <div className="relative w-full h-64 overflow-hidden bg-gray-100">
-                <img
-                  src={cert.image || "/placeholder.svg"}
-                  alt={cert.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+              <div className="relative w-full h-48 bg-gray-900 overflow-hidden">
+                <img src={cert.image || "/placeholder.svg"} alt={cert.title} className="w-full h-full object-cover" />
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{cert.title}</h3>
-                <p className="text-purple-600 font-semibold mb-3">{cert.from}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
-              </div>
+                <span className="inline-block text-xs font-semibold text-black border border-black px-3 py-1 rounded-full mb-3">
+                  {cert.from}
+                </span>
 
-              {/* Hover indicator */}
-              <div
-                className={`absolute top-4 right-4 w-3 h-3 bg-purple-600 rounded-full transition-all duration-300 ${
-                  hoveredId === cert.id ? "scale-150 opacity-100" : "opacity-50"
-                }`}
-              />
+                <span className="inline-block text-xs font-semibold text-black border border-black px-3 py-1 rounded-full ml-2">
+                  {cert.date}
+                </span>
+
+                <h3 className="text-xl font-bold text-black mb-3">{cert.title}</h3>
+
+                <p className="text-black text-sm leading-relaxed">{cert.description}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -151,9 +153,17 @@ const Certification = () => {
           onClick={() => setClickedId(null)}
         >
           <div
-            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
+            <button
+              onClick={() => setClickedId(null)}
+              className="absolute top-4 left-4 text-2xl text-gray-600 hover:text-gray-900 transition-colors z-10 w-8 h-8 flex items-center justify-center"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+
             {(() => {
               const cert = certifications.find((c) => c.id === clickedId)
               return cert ? (
@@ -163,15 +173,12 @@ const Certification = () => {
                     alt={cert.title}
                     className="w-full h-auto rounded-lg mb-6"
                   />
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">{cert.title}</h3>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-3xl font-bold text-gray-900">{cert.title}</h3>
+                    <span className="text-lg font-semibold text-gray-900 ml-4">{cert.date}</span>
+                  </div>
                   <p className="text-purple-600 font-semibold mb-4 text-lg">{cert.from}</p>
                   <p className="text-gray-600 mb-6 leading-relaxed">{cert.description}</p>
-                  <button
-                    onClick={() => setClickedId(null)}
-                    className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                  >
-                    Close
-                  </button>
                 </div>
               ) : null
             })()}
