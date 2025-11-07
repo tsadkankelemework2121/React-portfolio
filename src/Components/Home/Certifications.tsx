@@ -17,7 +17,7 @@ const CertificationSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   // Array of certification images
-  const certifications = [cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8]
+  const certifications = [cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8, cert9]
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? certifications.length - 1 : prev - 1))

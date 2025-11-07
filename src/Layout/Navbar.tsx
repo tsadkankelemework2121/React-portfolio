@@ -21,25 +21,30 @@ export default function Navigation() {
         isScrolled ? "bg-white/80 backdrop-blur-md border-b border-gray-200" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Left Navigation */}
-        <div className="flex gap-8">
-          <a href="#home" className="text-gray-900 font-medium hover:text-purple-600 transition">
-            Home
+      <div className="max-w-7xl mx-auto py-4 flex items-center justify-between">
+        {/* Left - Purple Logo + Navigation Items */}
+        <div className="flex items-center gap-20">
+          <a href="#home" className="text-2xl font-bold text-purple-600 hover:text-purple-700 transition">
+            Tsadkan
           </a>
-          <a href="#certification" className="text-gray-900 font-medium hover:text-purple-600 transition">
-            Certification
-          </a>
-          <a href="#design-projects" className="text-gray-900 font-medium hover:text-purple-600 transition">
-            Design Projects
-          </a>
-          <a href="#projects" className="text-gray-900 font-medium hover:text-purple-600 transition">
-            Projects
-          </a>
+          <div className="flex items-center gap-8">
+            <a href="#home" className="text-gray-900 hover:text-purple-600 transition">
+              Home
+            </a>
+            <a href="#design" className="text-gray-900 hover:text-purple-600 transition">
+              Design
+            </a>
+            <a href="#projects" className="text-gray-900 hover:text-purple-600 transition">
+              Projects
+            </a>
+            <a href="#certification" className="text-gray-900 hover:text-purple-600 transition">
+              Certification
+            </a>
+          </div>
         </div>
 
-        {/* Right Social Media */}
-        <div className="flex gap-6">
+        {/* Right - Social Media Icons + Get in touch */}
+        <div className="flex items-center gap-8">
           <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="Twitter">
             <Twitter className="w-5 h-5" />
           </a>
@@ -49,16 +54,13 @@ export default function Navigation() {
           <a href="#" className="text-gray-900 hover:text-purple-600 transition" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </a>
-          <div className="absolute top-8 right-8 z-20">
-        <a
-          href="#contact"
-          className="inline-block text-gray-900 font-medium text-lg border-b-2 border-purple-600 pb-2 hover:text-purple-600 transition"
-        >
-          Get in touch
-        </a>
-      </div>
+          <a
+            href="#contact"
+            className="text-gray-900 font-medium text-lg border-b-2 border-purple-600 pb-2 hover:text-purple-600 transition whitespace-nowrap"
+          >
+            Get in touch
+          </a>
         </div>
-        
       </div>
     </nav>
   )
