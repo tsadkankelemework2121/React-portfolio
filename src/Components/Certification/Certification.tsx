@@ -28,7 +28,8 @@ const Certification = () => {
       id: 1,
       title: "AI Fundamentals",
       from: "Alison",
-      description: "Comprehensive course covering artificial intelligence fundamentals, machine learning basics, and AI applications in modern technology.",
+      description:
+        "Comprehensive course covering artificial intelligence fundamentals, machine learning basics, and AI applications in modern technology.",
       image: AIalison,
     },
     {
@@ -49,14 +50,16 @@ const Certification = () => {
       id: 4,
       title: "Full Stack Development",
       from: "freeCodeCamp",
-      description: "Comprehensive certification covering front-end and back-end development, databases, and full-stack web development practices.",
+      description:
+        "Comprehensive certification covering front-end and back-end development, databases, and full-stack web development practices.",
       image: freeCodeCamp,
     },
     {
       id: 5,
       title: "Gig Hackathon Winner",
       from: "Gig Hackathon",
-      description: "Awarded for outstanding performance and innovation in the Gig Hackathon competition, showcasing problem-solving and technical skills.",
+      description:
+        "Awarded for outstanding performance and innovation in the Gig Hackathon competition, showcasing problem-solving and technical skills.",
       image: gighackathon,
     },
     {
@@ -70,32 +73,36 @@ const Certification = () => {
       id: 7,
       title: "M Academy Certification",
       from: "M Academy",
-      description: "Professional certification from M Academy demonstrating expertise in specialized technical skills and knowledge.",
+      description:
+        "Professional certification from M Academy demonstrating expertise in specialized technical skills and knowledge.",
       image: macademy,
     },
     {
       id: 8,
       title: "React Development",
       from: "Alison",
-      description: "Advanced React.js certification covering component architecture, hooks, state management, and modern React development patterns.",
+      description:
+        "Advanced React.js certification covering component architecture, hooks, state management, and modern React development patterns.",
       image: reactalison,
     },
     {
       id: 9,
       title: "SheCodes Hackathon",
       from: "SheCodes",
-      description: "Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
+      description:
+        "Recognition for participation and achievement in SheCodes Hackathon, promoting women in technology and coding excellence.",
       image: shecodeshackathon,
     },
   ]
 
   const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [clickedId, setClickedId] = useState<number | null>(null)
 
   return (
     <section className="min-h-screen bg-white py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 text-center">Certifications</h2>
+        {/* Title - Add margin-top to create space from navbar */}
+        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 mt-12 text-center">Certifications</h2>
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,19 +116,14 @@ const Certification = () => {
               }}
               onMouseEnter={() => setHoveredId(cert.id)}
               onMouseLeave={() => setHoveredId(null)}
+              onClick={() => setClickedId(cert.id)}
             >
               {/* Image Container */}
               <div className="relative w-full h-64 overflow-hidden bg-gray-100">
                 <img
-                  src={cert.image}
+                  src={cert.image || "/placeholder.svg"}
                   alt={cert.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                {/* Overlay on hover */}
-                <div
-                  className={`absolute inset-0 bg-purple-600 transition-opacity duration-300 ${
-                    hoveredId === cert.id ? "opacity-20" : "opacity-0"
-                  }`}
                 />
               </div>
 
@@ -142,9 +144,42 @@ const Certification = () => {
           ))}
         </div>
       </div>
+
+      {clickedId && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          onClick={() => setClickedId(null)}
+        >
+          <div
+            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {(() => {
+              const cert = certifications.find((c) => c.id === clickedId)
+              return cert ? (
+                <div className="p-8">
+                  <img
+                    src={cert.image || "/placeholder.svg"}
+                    alt={cert.title}
+                    className="w-full h-auto rounded-lg mb-6"
+                  />
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">{cert.title}</h3>
+                  <p className="text-purple-600 font-semibold mb-4 text-lg">{cert.from}</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{cert.description}</p>
+                  <button
+                    onClick={() => setClickedId(null)}
+                    className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              ) : null
+            })()}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
 
 export default Certification
-
