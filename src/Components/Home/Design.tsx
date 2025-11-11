@@ -5,13 +5,12 @@ import { useState, useRef, useEffect } from "react"
 import backgroundImage from "../../assets/bakground.png"
 import image1 from "../../assets/design/Choose Doctor.png"
 import image2 from "../../assets/design/Frame 1000003373.png"
-import image3 from "../../assets/design/Frame 1000003374.png"
 import image4 from "../../assets/design/Frame 1000003375.png"
 import image5 from "../../assets/design/Frame 1000003376.png"
 import image6 from "../../assets/design/Frame 1000003377.png"
 import image7 from "../../assets/design/Frame 1000003379.png"
 import image8 from "../../assets/design/refocus.png"
-
+import image3 from "../../assets/design/Frame 1000003374.png"
 export default function InfiniteCarousel() {
   const [isPaused, setIsPaused] = useState(false)
 

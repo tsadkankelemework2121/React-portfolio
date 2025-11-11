@@ -106,14 +106,14 @@ const Certification = () => {
       image: reactalison,
       date: "January 2025",
     },
-    {
-      id: 10,
-      title: "High School Diploma",
-      from: "Blessed Gebre Michael Catholic School",
-      description: "Academic achievement certificate representing completion of high school education with excellence.",
-      image: highschooldiploma,
-      date: "September 2022",
-    },
+    // {
+    //   id: 10,
+    //   title: "High School Diploma",
+    //   from: "Blessed Gebre Michael Catholic School",
+    //   description: "Academic achievement certificate representing completion of high school education with excellence.",
+    //   image: highschooldiploma,
+    //   date: "September 2022",
+    // },
    
     
   ]
