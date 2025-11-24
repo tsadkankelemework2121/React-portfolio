@@ -25,7 +25,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto py-4 flex items-center justify-between">
         {/* Left - Purple Logo + Navigation Items */}
         <div className="flex items-center gap-20">
-          <Link to="/" className="text-2xl font-bold text-purple-600 hover:text-purple-700 transition">
+          <Link to="/" className="text-2xl font-bold text-black hover:text-purple-700 transition">
             Tsadkan
           </Link>
           <div className="flex items-center gap-8">
