@@ -12,66 +12,60 @@ export default function AboutSection() {
   }
 
   return (
-    <section className="min-h-screen bg-white px-8 py-20 lg:px-16">
+    <section className="min-h-screen bg-white px-8 py-24 lg:px-20">
       <div className="mx-auto max-w-7xl">
-        {/* Main grid layout */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-9 items-center">
-          {/* Left Column - Biography */}
-          <div className="flex flex-col justify-between h-full">
-            {/* Biography Header */}
+        {/* Two-column grid layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          {/* Left Column - All Text Content */}
+          <div className="flex flex-col space-y-8">
+            {/* Name */}
             <div>
-              <p className="text-xs tracking-widest text-gray-400 uppercase mb-8">Biography</p>
+              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-black leading-tight mb-6">
+                <span className="text-black">Tsadkan Kelemework</span>
+              </h1>
+            </div>
 
-              {/* Main Heading with purple accent dot */}
-              <div className="mb-12">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-5 h-2 bg-purple-600 rounded-full mt-2 shrink-0"></div>
-                  <h1 className="text-3xl lg:text-2xl font-serif leading-tight">
-                  Hi, I'm  <span className="text-purple-600">Tsadkan Kelemework</span> Specialized in UI/UX Design and Frontend Development with aspirations in Full-Stack Engineering.Passionate about creating innovative solutions beatiful user interfaces and experiences through code.
-                  </h1>
-                </div>
-              </div>
+            {/* Biography */}
+            <div>
+              <p className="text-sm lg:text-base text-gray-700 font-serif leading-relaxed max-w-lg">
+                Hi, I'm <span className="text-purple-600 font-medium">Tsadkan Kelemework</span>. Specialized in UI/UX Design and Frontend Development with aspirations in Full-Stack Engineering. Passionate about creating innovative solutions, beautiful user interfaces and experiences through code.
+              </p>
             </div>
 
             {/* Contact Information */}
-            <div>
-              <p className="text-xs tracking-widest text-gray-400 uppercase mb-6">Contact</p>
-              <div className="space-y-3 font-serif text-base">
-                <p className="text-black">Bahir Dar, Ethiopia</p>
-                <p className="text-black">tsadkankelemeworktw@gmail.com.com</p>
-                <p className="text-black">+251952615114</p>
+            <div className="pt-4">
+              <div className="space-y-2.5 font-serif">
+                <p className="text-lg text-black">Bahir Dar, Ethiopia</p>
+                <p className="text-lg text-black">tsadkankelemeworktw@gmail.com</p>
+                <p className="text-lg text-black">+251952615114</p>
               </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button 
+                onClick={handleDownloadResume}
+                className="px-8 py-3 bg-black text-white font-serif text-base rounded-lg hover:bg-purple-600 transition-colors"
+              >
+                Download Resume
+              </button>
+              <button className="px-8 py-3 border-2 border-black text-black font-serif text-base rounded-lg hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors">
+                Contact Me
+              </button>
             </div>
           </div>
 
-          {/* Center Column - Profile Image */}
-          <div className="flex justify-center lg:col-span-1">
-            <div className="relative w-full max-w-sm">
-              <div 
-                className="rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
-                style={{
-                  aspectRatio: '2/3'
-                }}
-              >
+          {/* Right Column - Profile Image */}
+          <div className="flex justify-end items-center h-full">
+            <div className="relative w-full max-w-md">
+              <div className="rounded-lg overflow-hidden shadow-xl">
                 <img
                   src={image}
-                  alt=" UI/UX Designer"
-                  className="w-full h-full object-cover"
+                  alt="Tsadkan Kelemework - UI/UX Designer"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col justify-center items-end gap-6 h-full">
-            <button 
-              onClick={handleDownloadResume}
-              className="px-12 py-3 bg-black text-white font-serif text-lg rounded-lg hover:bg-purple-600 transition-colors"
-            >
-              Download Resume
-            </button>
-            <button className="px-8 py-3 border-2 text-black font-serif text-lg rounded-lg hover:bg-purple-600 hover:text-white transition-colors">
-              Contact Me
-            </button>
           </div>
         </div>
       </div>
