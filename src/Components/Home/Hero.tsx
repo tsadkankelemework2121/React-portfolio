@@ -3,7 +3,7 @@
 import { useState } from "react"
 import heroimage from "../../assets/image1.png"
 export default function Hero() {
-  // const heroImagePath = "/images/hero-image.jpg" // Update this path with your image file
+
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -23,11 +23,12 @@ export default function Hero() {
       {/* Content Overlay */}
       <div className="relative z-10 text-center px-6">
         <h1
-          className="text-6xl md:text-4xl font-medium text-gray-900 mb-4"
+          className="text-6xl md:text-4xl font-medium text-black"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           "Bringing creativity and code together to build what matters."
         </h1>
+        <br />
         <p className="text-xl md:text-3xl text-gray-700 font-medium mb-12">
         UI/UX Designer & Front-End Developer | Aspiring Full-Stack Developer
         </p>
