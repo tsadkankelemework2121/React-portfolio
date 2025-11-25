@@ -12,15 +12,15 @@ export default function AboutSection() {
   }
 
   return (
-    <section className="min-h-screen bg-white px-8 py-24 lg:px-20">
+    <section className="bg-white px-8 py-16 lg:px-20 lg:py-20">
       <div className="mx-auto max-w-7xl">
         {/* Two-column grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - All Text Content */}
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6">
             {/* Name */}
             <div>
-              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-black leading-tight mb-6">
+              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-black leading-tight mb-4">
                 <span className="text-black">Tsadkan Kelemework</span>
               </h1>
             </div>
@@ -33,8 +33,8 @@ export default function AboutSection() {
             </div>
 
             {/* Contact Information */}
-            <div className="pt-4">
-              <div className="space-y-2.5 font-serif">
+            <div className="pt-2">
+              <div className="space-y-2 font-serif">
                 <p className="text-lg text-black">Bahir Dar, Ethiopia</p>
                 <p className="text-lg text-black">tsadkankelemeworktw@gmail.com</p>
                 <p className="text-lg text-black">+251952615114</p>
@@ -42,7 +42,7 @@ export default function AboutSection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button 
                 onClick={handleDownloadResume}
                 className="px-8 py-3 bg-black text-white font-serif text-base rounded-lg hover:bg-purple-600 transition-colors"

@@ -163,7 +163,7 @@ const Certification = () => {
           onClick={() => setClickedId(null)}
         >
           <div
-            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+            className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
