@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, FormEvent } from "react"
-import { Linkedin, Github, Mail } from "lucide-react"
+import { useState } from "react"
+import type { FormEvent } from "react"
+import { Linkedin, Github, Mail, Phone } from "lucide-react"
 
 function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -35,8 +36,6 @@ function ContactPage() {
         }),
       })
 
-      const data = await response.json()
-
       if (response.ok) {
         setIsSubmitted(true)
         setFormData({ name: "", email: "", message: "" })
@@ -55,49 +54,9 @@ function ContactPage() {
     setFormData({ name: "", email: "", message: "" })
   }
 
-  if (isSubmitted) {
-    return (
-      <section className="min-h-screen bg-white flex items-center justify-center px-4 py-16 mt-20">
-        <div className="max-w-2xl w-full text-center">
-          <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
-            <div className="mb-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Message Sent!
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Thank you for reaching out. I'll get back to you as soon as possible.
-            </p>
-            <button
-              onClick={handleReset}
-              className="px-8 py-3 bg-black text-white font-serif text-base rounded-lg hover:bg-purple-600 transition-colors"
-            >
-              Send Another Message
-            </button>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   return (
     <section className="min-h-screen bg-white px-4 py-16 mt-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Get in Touch</h1>
@@ -106,13 +65,46 @@ function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white rounded-lg shadow-lg p-6 md:p-8"
-            >
+          <div>
+            {isSubmitted ? (
+              <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 md:p-12 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg
+                      className="w-8 h-8 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Message Sent!
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Thank you for reaching out. I'll get back to you as soon as possible.
+                </p>
+                <button
+                  onClick={handleReset}
+                  className="px-8 py-3 bg-black text-white font-serif text-base rounded-lg hover:bg-purple-600 transition-colors"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="bg-white rounded-lg shadow-lg p-6 md:p-8"
+              >
               {/* Honeypot field - hidden from users but visible to bots */}
               <input
                 type="text"
@@ -185,48 +177,63 @@ function ContactPage() {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
+            )}
           </div>
 
           {/* Contact Information Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 h-full">
-              <h2 className="text-2xl font-bold text-black mb-6">Contact Information</h2>
+          <div>
+            <div className="bg-white rounded-lg shadow-lg p-8 md:p-10 h-full">
+              <h2 className="text-2xl md:text-3xl font-bold text-black mb-8">Contact Information</h2>
               
               {/* Email */}
-              <div className="mb-6">
-                <div className="flex items-center gap-3 mb-2">
-                  <Mail className="w-5 h-5 text-purple-600" />
-                  <h3 className="font-semibold text-gray-900">Email</h3>
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <Mail className="w-6 h-6 text-purple-600" />
+                  <h3 className="font-semibold text-gray-900 text-lg">Email</h3>
                 </div>
                 <a
                   href="mailto:tsadkankelemeworktw@gmail.com"
-                  className="text-gray-600 hover:text-purple-600 transition-colors break-all"
+                  className="text-gray-600 hover:text-purple-600 transition-colors text-base"
                 >
                   tsadkankelemeworktw@gmail.com
                 </a>
               </div>
 
+              {/* Phone */}
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <Phone className="w-6 h-6 text-purple-600" />
+                  <h3 className="font-semibold text-gray-900 text-lg">Phone</h3>
+                </div>
+                <a
+                  href="tel:+251952615114"
+                  className="text-gray-600 hover:text-purple-600 transition-colors text-base"
+                >
+                  +251952615114
+                </a>
+              </div>
+
               {/* Social Media */}
               <div>
-                <h3 className="font-semibold text-gray-900 mb-4">Connect with me</h3>
+                <h3 className="font-semibold text-gray-900 mb-4 text-lg">Connect with me</h3>
                 <div className="flex gap-4">
                   <a
                     href="https://www.linkedin.com/in/tsadkan-kelemework-11aa30345/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-gray-700"
+                    className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-gray-700"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="w-5 h-5" />
+                    <Linkedin className="w-6 h-6" />
                   </a>
                   <a
                     href="https://github.com/tsadkankelemework2121"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-gray-700"
+                    className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-gray-700"
                     aria-label="GitHub"
                   >
-                    <Github className="w-5 h-5" />
+                    <Github className="w-6 h-6" />
                   </a>
                 </div>
               </div>
