@@ -4,6 +4,7 @@ import Navbar from "./Layout/Navbar"
 import Homepage from "./Pages/Home" 
 import Certificationpage from "./Pages/Certification";
 import Projects from "./Components/Projects/Projects";
+import ContactPage from "./Pages/Contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Homepage/>}/>
           <Route path="/certification" element={<Certificationpage/>}/>
           <Route path="/projects" element={<Projects/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
           </Routes>
         </div>
         {/* <Footer/> */}
