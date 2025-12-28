@@ -2,13 +2,8 @@ import image from "../../assets/profile.jpg"
 import resumePdfUrl from "../../assets/Tsadkan-Kelemework (1).pdf?url"
 
 export default function AboutSection() {
-  const handleDownloadResume = () => {
-    const link = document.createElement("a")
-    link.href = resumePdfUrl
-    link.download = "Tsadkan-Kelemework-Resume.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const handleViewResume = () => {
+    window.open(resumePdfUrl, '_blank')
   }
 
   return (
@@ -44,10 +39,10 @@ export default function AboutSection() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button 
-                onClick={handleDownloadResume}
+                onClick={handleViewResume}
                 className="px-8 py-3 bg-black text-white font-serif text-base rounded-lg hover:bg-purple-600 transition-colors"
               >
-                Download Resume
+                View Resume
               </button>
               <button className="px-8 py-3 border-2 border-black text-black font-serif text-base rounded-lg hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors">
                 Contact Me
