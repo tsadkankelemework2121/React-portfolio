@@ -52,12 +52,12 @@ export default function Navigation() {
           <a href="https://github.com/tsadkankelemework2121" className="text-gray-900 hover:text-purple-600 transition" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </a>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="text-gray-900 font-medium text-lg border-b-2 border-purple-600 pb-2 hover:text-purple-600 transition whitespace-nowrap"
           >
             Get in touch
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
