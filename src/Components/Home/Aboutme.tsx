@@ -23,7 +23,7 @@ export default function AboutSection() {
             {/* Biography */}
             <div>
               <p className="text-sm lg:text-base text-gray-700 font-serif leading-relaxed max-w-lg">
-                Hi, I'm <span className="text-purple-600 font-medium">Tsadkan Kelemework</span>. Specialized in UI/UX Design and Frontend Development with aspirations in Full-Stack Engineering. Passionate about creating innovative solutions, beautiful user interfaces and experiences through code.
+                Hi, I'm <span className="text-purple-600 font-medium">Tsadkan Kelemework</span>. I am a UI/UX Designer and Web Developer. Passionate about creating innovative solutions, beautiful user interfaces and experiences through code.
               </p>
             </div>
 

@@ -30,7 +30,7 @@ export default function Hero() {
         </h1>
         <br />
         <p className="text-xl md:text-3xl text-gray-700 font-medium mb-12">
-        UI/UX Designer & Front-End Developer | Aspiring Full-Stack Developer
+          UI/UX Designer & Web Developer
         </p>
       </div>
     </section>
