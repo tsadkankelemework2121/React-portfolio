@@ -15,6 +15,7 @@ import richfamclonVideo from "../../assets/projects/richfamclon.mp4"
 // Import image assets
 import financeImage from "../../assets/projects/finance.png"
 import nextportImage from "../../assets/projects/nextport.png"
+import peaImage from "../../assets/projects/pea.png"
 
 interface Project {
   id: number
@@ -35,6 +36,17 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Petroleum and Energy Authority (PEA) Management System",
+      description:
+        "A comprehensive web-based platform for petroleum transportation management, GPS vehicle tracking, fuel dispatch monitoring, and oil company coordination, featuring interactive maps, depot scheduling, and role-based dashboards.",
+      image: peaImage,
+      languages: ["React", "TypeScript", "Tailwind CSS", "Laravel / PHP", "PostgreSQL"],
+      liveDemo: "https://example.com",
+      gitCode: "https://github.com/tsadkankelemework2121/Petroleum_and_Energy_Authority",
+      category: "Real World Project",
+    },
+    {
+      id: 2,
       title: "Refocus Design System",
       description:
         "A comprehensive design system and UI component library built for modern web applications with accessibility, theming, and responsive design at its core.",
@@ -45,7 +57,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-        id: 2,
+        id: 3,
         title: "Knowledge First Career Platform",
         description:
           "A career development platform that connects job seekers with opportunities, providing career guidance, skill assessments, and personalized learning paths.",
@@ -56,7 +68,7 @@ const ProjectsSection = () => {
         category: "Real World Project",
       },
       {
-        id: 3,
+        id: 4,
         title: "Knowledge First Learning Platform",
         description:
           "An innovative e-learning platform offering interactive courses, real-time collaboration, and AI-powered personalized learning experiences for students worldwide.",
@@ -67,7 +79,7 @@ const ProjectsSection = () => {
         category: "REal World Project",
       },
     {
-      id: 4,
+      id: 5,
       title: "AI Agent Recruiter System",
       description:
         "An intelligent recruitment platform powered by AI agents that streamline candidate matching, automate screening, and enhance hiring decisions with advanced machine learning algorithms.",
@@ -79,7 +91,7 @@ const ProjectsSection = () => {
     },
     
     {
-      id: 5,
+      id: 6,
       title: "Smart Nutrition Guide",
       description:
         "A comprehensive web application that helps users track daily calorie intake, meals, and fitness goals with personalized recommendations and meal planning.",
@@ -90,7 +102,7 @@ const ProjectsSection = () => {
       category: "Personal Project",
     },
     {
-      id: 6,
+      id: 7,
       title: "Healthcare Management System",
       description:
         "An advanced healthcare management platform for hospitals and clinics to manage patient records, appointments, and medical history with secure data handling.",
@@ -104,7 +116,7 @@ const ProjectsSection = () => {
    
     
     {
-      id: 7,
+      id: 8,
       title: "ETex Business Management",
       description:
         "A complete business management solution for enterprises, featuring inventory management, sales tracking, customer relations, and comprehensive reporting tools.",
@@ -115,7 +127,7 @@ const ProjectsSection = () => {
       category: "Group test Project before we get in to real project",
     },
     {
-      id: 8,
+      id: 9,
       title: "RichFam Clone Application",
       description:
         "A feature-rich social networking application inspired by modern platforms, with real-time messaging, content sharing, and community features.",
@@ -126,7 +138,7 @@ const ProjectsSection = () => {
       category: "Group test Project before we get in to real project",
     },
     {
-        id: 9,
+        id: 10,
         title: "Finance Manager – Budget Control System",
         description:
           "A smart budgeting app designed to help students and individuals manage expenses, track income, and set financial goals with real-time insights and analytics.",
@@ -137,7 +149,7 @@ const ProjectsSection = () => {
         category: "Personal Project",
       },
       {
-        id: 10,
+        id: 11,
         title: "Next.js Portfolio Website",
         description:
           "A modern, responsive portfolio website built with Next.js showcasing projects, skills, and contact information with smooth animations and interactions.",

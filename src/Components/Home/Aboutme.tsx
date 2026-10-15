@@ -1,5 +1,5 @@
 import image from "../../assets/profile.jpg"
-import resumePdfUrl from "../../assets/Tsadkan-Kelemework (1).pdf?url"
+import resumePdfUrl from "../../assets/Tsadkan_Kelemework.pdf?url"
 
 export default function AboutSection() {
   const handleViewResume = () => {

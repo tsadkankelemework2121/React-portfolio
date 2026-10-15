@@ -13,7 +13,7 @@ import macademy from "../../assets/certifications/macademy.png"
 import reactalison from "../../assets/certifications/reactalison.png"
 import shecodeshackathon from "../../assets/certifications/shecodeshackathon.jpg"
 import cert10 from "../../assets/certifications/helder.png"
-
+import mlcer from "../../assets/certifications/mlcer.png"
 interface Certification {
   id: number
   title: string
@@ -105,6 +105,15 @@ const Certification = () => {
         "I successfully completed the 'React JavaScript – Fundamentals to Coding & New Beginnings' course, published by Digital Partner and delivered via the Alison learning platform. This CPD-certified course, aligned with industry standards, covers modern JavaScript, React fundamentals, component structures, hooks (e.g., useState, useEffect), and single-page app concepts. I completed all lessons and exercises but could not afford the paid certificate. The displayed certificate is a sample, and I’ve included a screenshot of the official publisher details for verification and transparency.",
       image: reactalison,
       date: "January 2025",
+    },
+    {
+      id: 10,
+      title: "ML Summer School 2026 ",
+      from: "Cohere Labs",
+      description:
+        "In involvement and dedication to continuous learning and collaboration.",
+      image: mlcer,
+      date: "August 2026",
     },
     // {
     //   id: 10,
