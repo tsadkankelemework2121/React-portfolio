@@ -55,21 +55,25 @@ function ContactPage() {
   }
 
   return (
-    <section className="min-h-screen bg-white px-4 py-16 mt-20">
+    <section className="min-h-screen bg-white px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Get in Touch</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-8 h-1 bg-purple-600 rounded-full" />
+            <span className="text-xs uppercase tracking-widest text-purple-600 font-semibold">Contact</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-black mb-4">Get in Touch</h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Have a question or want to work together? I'd love to hear from you. Send me a message and I'll respond as soon as possible.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
           <div>
             {isSubmitted ? (
-              <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 md:p-12 text-center">
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10 text-center">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg
