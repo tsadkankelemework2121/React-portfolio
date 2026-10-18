@@ -25,10 +25,6 @@ export default function Hero() {
 
       {/* Content Overlay */}
       <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 max-w-5xl mx-auto py-12">
-        <span className="inline-block px-4 py-1.5 mb-4 text-xs sm:text-sm font-semibold tracking-wider text-purple-700 bg-purple-100/90 rounded-full uppercase">
-          Welcome to my portfolio
-        </span>
-
         <h1
           className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-black leading-tight sm:leading-tight md:leading-tight mb-4 sm:mb-6"
           style={{ fontFamily: "'Playfair Display', serif" }}
@@ -37,7 +33,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-800 font-medium max-w-2xl mx-auto">
-          UI/UX Designer &amp; Web Developer
+          Full-Stack Design Engineer
         </p>
       </div>
     </section>

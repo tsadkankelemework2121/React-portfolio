@@ -30,7 +30,7 @@ export default function AboutSection() {
             {/* Biography */}
             <div>
               <p className="text-base sm:text-lg text-gray-700 font-serif leading-relaxed max-w-xl">
-                Hi, I'm <span className="text-purple-600 font-medium">Tsadkan Kelemework</span>. I am a UI/UX Designer and Web Developer. Passionate about creating innovative solutions, beautiful user interfaces, and engaging experiences through code.
+                Hi, I'm <span className="text-purple-600 font-medium">Tsadkan Kelemework</span>. I am a Full-Stack Design Engineer. Passionate about creating innovative solutions, beautiful user interfaces, and engaging experiences through code.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export default function AboutSection() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-50">
                 <img
                   src={image}
-                  alt="Tsadkan Kelemework - UI/UX Designer"
+                  alt="Tsadkan Kelemework - Full-Stack Design Engineer"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
