@@ -32,7 +32,7 @@ export interface Project {
   languages: string[]
   liveDemo: string
   gitCode?: string
-  category: string
+  category?: string
 }
 
 const ProjectsSection = () => {
@@ -61,7 +61,6 @@ const ProjectsSection = () => {
       image: bayerImage,
       languages: ["React", "React Query", "REST APIs", "Tailwind CSS", "Data Analytics"],
       liveDemo: "https://bayer-03.vercel.app/",
-      category: "Real World Project",
     },
     {
       id: 2,
@@ -79,7 +78,6 @@ const ProjectsSection = () => {
       languages: ["Node.js", "Express", "MongoDB", "REST APIs", "JavaScript", "Tailwind CSS"],
       liveDemo: "https://blsglob.com",
       gitCode: "https://github.com/skillbridge5/BelTech_backend",
-      category: "Real World Project",
     },
     {
       id: 3,
@@ -98,7 +96,6 @@ const ProjectsSection = () => {
       languages: ["React", "TypeScript", "Tailwind CSS", "Laravel / PHP", "PostgreSQL"],
       liveDemo: "https://example.com",
       gitCode: "https://github.com/tsadkankelemework2121/Petroleum_and_Energy_Authority",
-      category: "Real World Project",
     },
     {
       id: 4,
@@ -117,7 +114,6 @@ const ProjectsSection = () => {
       languages: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Figma"],
       liveDemo: "https://subscribe.refocusafrika.com/",
       gitCode: "https://github.com/bezawit11234/StudyAboard",
-      category: "Real World Project",
     },
     {
       id: 5,
@@ -136,7 +132,6 @@ const ProjectsSection = () => {
       languages: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express"],
       liveDemo: "https://example.com",
       gitCode: "https://github.com/AshenafiHelder/knowledge-first.com",
-      category: "Real World Project",
     },
     {
       id: 6,
@@ -155,7 +150,6 @@ const ProjectsSection = () => {
       languages: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
       liveDemo: "https://example.com",
       gitCode: "https://github.com/AshenafiHelder/Knowledge-first",
-      category: "Real World Project",
     },
     {
       id: 7,
@@ -231,7 +225,6 @@ const ProjectsSection = () => {
       languages: ["React", "Node.js", "PostgreSQL", "Express", "Odoo"],
       liveDemo: "https://example.com",
       gitCode: "https://github.com/HiwotBelay/Etex-clone",
-      category: "Real World Project",
     },
     {
       id: 11,
@@ -250,7 +243,6 @@ const ProjectsSection = () => {
       languages: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       liveDemo: "https://holistic-richfam-clone-virid.vercel.app/",
       gitCode: "https://github.com/tsadkankelemework2121/Holistic-richfam-clone",
-      category: "Real World Project",
     },
     {
       id: 12,
@@ -386,10 +378,10 @@ const ProjectsSection = () => {
   }
 
   // Filter categories
-  const categories = ["All", "Real World Project", "AI/ML", "Personal Project"]
+  const categories = ["All", "AI/ML", "Personal Project"]
   const filteredProjects = selectedCategory === "All"
     ? projects
-    : projects.filter((p) => p.category.toLowerCase().includes(selectedCategory.toLowerCase()))
+    : projects.filter((p) => Boolean(p.category && p.category.toLowerCase().includes(selectedCategory.toLowerCase())))
 
   return (
     <section className="relative min-h-screen bg-white pt-24 sm:pt-28 pb-20 px-4 sm:px-6 lg:px-8">
@@ -478,11 +470,13 @@ const ProjectsSection = () => {
                 )}
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 bg-purple-600/95 text-white text-xs font-semibold rounded-full shadow-sm backdrop-blur-sm">
-                    {project.category}
-                  </span>
-                </div>
+                {project.category && project.category !== "Real World Project" && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3 py-1 bg-purple-600/95 text-white text-xs font-semibold rounded-full shadow-sm backdrop-blur-sm">
+                      {project.category}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Content */}
@@ -561,9 +555,11 @@ const ProjectsSection = () => {
             {/* Modal Header */}
             <div className="sticky top-0 bg-white/95 backdrop-blur-md px-6 py-4 border-b border-gray-100 flex items-center justify-between z-20">
               <div className="flex items-center gap-2">
-                <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-full uppercase tracking-wider">
-                  {selectedProject.category}
-                </span>
+                {selectedProject.category && selectedProject.category !== "Real World Project" && (
+                  <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-full uppercase tracking-wider">
+                    {selectedProject.category}
+                  </span>
+                )}
                 <span className="text-xs text-gray-500 font-medium">Project #{selectedProject.id} of {projects.length}</span>
               </div>
               
