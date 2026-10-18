@@ -15,6 +15,7 @@ import refocusVideo from "../../assets/projects/refocus.mp4"
 import richfamclonVideo from "../../assets/projects/richfamclon.mp4"
 
 // Import image assets
+import bayerImage from "../../assets/bayer.png"
 import beltechImage from "../../assets/beltech.jpg"
 import financeImage from "../../assets/projects/finance.png"
 import nextportImage from "../../assets/projects/nextport.png"
@@ -30,7 +31,7 @@ export interface Project {
   image?: string
   languages: string[]
   liveDemo: string
-  gitCode: string
+  gitCode?: string
   category: string
 }
 
@@ -46,6 +47,24 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Bayer Life Science Ethiopia — Fleet Safety & Compliance Platform",
+      description:
+        "Enterprise fleet safety & compliance report dashboard built for Bayer Life Science Ethiopia PLC, providing real-time speed monitoring, trip compliance, and automated PDF reporting.",
+      detailedDescription:
+        "Bayer Life Science Ethiopia Fleet Safety & Compliance Report is a mission-critical telematics analytics and corporate driver safety management platform. Designed for Bayer Life Science Ethiopia PLC, it monitors vehicle speed benchmarks, night driving, continuous driving events, and geofence violations across the entire corporate fleet through automated company backend API integration.",
+      features: [
+        "Fleet Telematics & Compliance Monitoring: Real-time visibility across 14+ vehicles tracking overspeeding, continuous driving hours, night driving, and geofence adherence.",
+        "Speed Analytics & Benchmarking: Visualizes maximum recorded speeds (up to 203 km/h) against corporate threshold limits (110 km/h) with event frequency comparisons.",
+        "High-Performance API Hydration: Built with React and React Query to fetch, cache, and synchronize live telematics data seamlessly from company backend APIs.",
+        "Automated Compliance & PDF Reports: Provides structured data summaries, driver audit logs, and one-click PDF report exports for executive fleet management.",
+      ],
+      image: bayerImage,
+      languages: ["React", "React Query", "REST APIs", "Tailwind CSS", "Data Analytics"],
+      liveDemo: "https://bayer-03.vercel.app/",
+      category: "Real World Project",
+    },
+    {
+      id: 2,
       title: "Beltech Solutions — Enterprise Digital Transformation Platform",
       description:
         "Backend Architecture & Modern Corporate Web Platform for ERP & Automation Solutions delivering enterprise digital transformation across Africa.",
@@ -63,7 +82,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 2,
+      id: 3,
       title: "Petroleum and Energy Authority (PEA) Management System",
       description:
         "A comprehensive web-based platform for petroleum transportation management, GPS vehicle tracking, fuel dispatch monitoring, and oil company coordination.",
@@ -82,7 +101,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 3,
+      id: 4,
       title: "Refocus Design System",
       description:
         "A comprehensive design system and UI component library built for modern web applications with accessibility, theming, and responsive design at its core.",
@@ -101,7 +120,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 4,
+      id: 5,
       title: "Knowledge First Career Platform",
       description:
         "A career development platform that connects job seekers with opportunities, providing career guidance, skill assessments, and personalized learning paths.",
@@ -120,7 +139,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 5,
+      id: 6,
       title: "Knowledge First Learning Platform",
       description:
         "An innovative e-learning platform offering interactive courses, real-time collaboration, and AI-powered personalized learning experiences for students worldwide.",
@@ -139,7 +158,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 6,
+      id: 7,
       title: "AI Agent Recruiter System",
       description:
         "An intelligent recruitment platform powered by AI agents that streamline candidate matching, automate screening, and enhance hiring decisions with machine learning.",
@@ -158,7 +177,7 @@ const ProjectsSection = () => {
       category: "AI/ML",
     },
     {
-      id: 7,
+      id: 8,
       title: "Smart Nutrition Guide",
       description:
         "A comprehensive web application that helps users track daily calorie intake, meals, and fitness goals with personalized recommendations and meal planning.",
@@ -177,7 +196,7 @@ const ProjectsSection = () => {
       category: "Personal Project",
     },
     {
-      id: 8,
+      id: 9,
       title: "Healthcare Management System",
       description:
         "An advanced healthcare management platform for hospitals and clinics to manage patient records, appointments, and medical history with secure data handling.",
@@ -196,7 +215,7 @@ const ProjectsSection = () => {
       category: "Academic / Group",
     },
     {
-      id: 9,
+      id: 10,
       title: "ETex Business Management",
       description:
         "A complete business management solution for enterprises, featuring inventory management, sales tracking, customer relations, and comprehensive reporting tools.",
@@ -215,7 +234,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 10,
+      id: 11,
       title: "RichFam Clone Application",
       description:
         "A feature-rich social networking application inspired by modern platforms, with real-time messaging, content sharing, and community features.",
@@ -234,7 +253,7 @@ const ProjectsSection = () => {
       category: "Real World Project",
     },
     {
-      id: 11,
+      id: 12,
       title: "Finance Manager – Budget Control System",
       description:
         "A smart budgeting app designed to help students and individuals manage expenses, track income, and set financial goals with real-time insights and analytics.",
@@ -253,7 +272,7 @@ const ProjectsSection = () => {
       category: "Personal Project",
     },
     {
-      id: 12,
+      id: 13,
       title: "Next.js Portfolio Website",
       description:
         "A modern, responsive portfolio website built with Next.js showcasing projects, skills, and contact information with smooth animations and interactions.",
@@ -510,16 +529,18 @@ const ProjectsSection = () => {
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
-                  <a
-                    href={project.gitCode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white text-black hover:bg-gray-100 text-xs font-semibold rounded-lg transition-colors border border-gray-300 flex items-center justify-center"
-                    aria-label="GitHub Code"
-                    title="GitHub Repository"
-                  >
-                    <Github className="w-4 h-4" />
-                  </a>
+                  {project.gitCode && (
+                    <a
+                      href={project.gitCode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white text-black hover:bg-gray-100 text-xs font-semibold rounded-lg transition-colors border border-gray-300 flex items-center justify-center"
+                      aria-label="GitHub Code"
+                      title="GitHub Repository"
+                    >
+                      <Github className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -653,15 +674,17 @@ const ProjectsSection = () => {
               </button>
 
               <div className="flex w-full sm:w-auto items-center gap-3">
-                <a
-                  href={selectedProject.gitCode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 sm:flex-none px-5 py-2.5 bg-white text-black border border-gray-300 hover:bg-gray-50 text-sm font-semibold rounded-xl transition flex items-center justify-center gap-2"
-                >
-                  <Github className="w-4 h-4" />
-                  GitHub Repository
-                </a>
+                {selectedProject.gitCode && (
+                  <a
+                    href={selectedProject.gitCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 sm:flex-none px-5 py-2.5 bg-white text-black border border-gray-300 hover:bg-gray-50 text-sm font-semibold rounded-xl transition flex items-center justify-center gap-2"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub Repository
+                  </a>
+                )}
                 <a
                   href={selectedProject.liveDemo}
                   target="_blank"
