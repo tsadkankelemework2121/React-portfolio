@@ -44,9 +44,26 @@ const ProjectsSection = () => {
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({})
   const modalVideoRef = useRef<HTMLVideoElement | null>(null)
 
-  const projects: Project[] = [
-    {
+  const projects: Project[] = [{
       id: 1,
+      title: "Petroleum and Energy Authority (PEA) Management System",
+      description:
+        "A comprehensive web-based platform for petroleum transportation management, GPS vehicle tracking, fuel dispatch monitoring, and oil company coordination.",
+      detailedDescription:
+        "The Petroleum and Energy Authority (PEA) platform is a full-featured government-grade enterprise system created to oversee the downstream petroleum supply chain. It provides real-time GPS tracking for fuel tanker fleets, digital dispatch manifests, role-based dashboards for regulators and oil distribution companies, and automated compliance auditing.",
+      features: [
+        "Real-time GPS vehicle tracking and route verification",
+        "Fuel depot scheduling and automated dispatch manifests",
+        "Multi-tenant role-based access control (Admin, Depot Manager, Inspector, Transporter)",
+        "Automated compliance reporting and anomaly detection",
+      ],
+      image: peaImage,
+      languages: ["React", "TypeScript", "Tailwind CSS", "Laravel / PHP", "PostgreSQL"],
+      liveDemo: "https://example.com",
+      gitCode: "https://github.com/tsadkankelemework2121/Petroleum_and_Energy_Authority",
+    },
+    {
+      id: 2,
       title: "Bayer Life Science Ethiopia — Fleet Safety & Compliance Platform",
       description:
         "Enterprise fleet safety & compliance report dashboard built for Bayer Life Science Ethiopia PLC, providing real-time speed monitoring, trip compliance, and automated PDF reporting.",
@@ -63,7 +80,7 @@ const ProjectsSection = () => {
       liveDemo: "https://bayer-03.vercel.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Beltech Solutions — Enterprise Digital Transformation Platform",
       description:
         "Backend Architecture & Modern Corporate Web Platform for ERP & Automation Solutions delivering enterprise digital transformation across Africa.",
@@ -78,24 +95,6 @@ const ProjectsSection = () => {
       languages: ["Node.js", "Express", "MongoDB", "REST APIs", "JavaScript", "Tailwind CSS"],
       liveDemo: "https://blsglob.com",
       gitCode: "https://github.com/skillbridge5/BelTech_backend",
-    },
-    {
-      id: 3,
-      title: "Petroleum and Energy Authority (PEA) Management System",
-      description:
-        "A comprehensive web-based platform for petroleum transportation management, GPS vehicle tracking, fuel dispatch monitoring, and oil company coordination.",
-      detailedDescription:
-        "The Petroleum and Energy Authority (PEA) platform is a full-featured government-grade enterprise system created to oversee the downstream petroleum supply chain. It provides real-time GPS tracking for fuel tanker fleets, digital dispatch manifests, role-based dashboards for regulators and oil distribution companies, and automated compliance auditing.",
-      features: [
-        "Real-time GPS vehicle tracking and route verification",
-        "Fuel depot scheduling and automated dispatch manifests",
-        "Multi-tenant role-based access control (Admin, Depot Manager, Inspector, Transporter)",
-        "Automated compliance reporting and anomaly detection",
-      ],
-      image: peaImage,
-      languages: ["React", "TypeScript", "Tailwind CSS", "Laravel / PHP", "PostgreSQL"],
-      liveDemo: "https://example.com",
-      gitCode: "https://github.com/tsadkankelemework2121/Petroleum_and_Energy_Authority",
     },
     {
       id: 4,
